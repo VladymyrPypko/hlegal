@@ -1,0 +1,32 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: $font-size;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: $font-family;
+    font-size: 1rem;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

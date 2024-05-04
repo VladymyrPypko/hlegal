@@ -1,0 +1,36 @@
+@use "../presets" as *;
+
+// mobile
+@mixin mobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+// tablet-sd
+@mixin tablet-sd {
+    @media (min-width: $tablet-sd) {
+        @content;
+    }
+}
+
+// tablet-hd
+@mixin tablet-hd {
+    @media (min-width: $tablet-hd) {
+        @content;
+    }
+}
+
+// desktop-sd
+@mixin desktop-sd {
+    @media (min-width: $desktop-sd) {
+        @content;
+    }
+}
+
+// desktop-hd
+@mixin desktop-hd {
+    @media (min-width: $desktop-hd) {
+        @content;
+    }
+}
