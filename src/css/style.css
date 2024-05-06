@@ -148,7 +148,7 @@ a {
 }
 @media (min-width: 768px) {
   .popup {
-    max-height: 612px;
+    height: 612px;
     width: 85%;
     max-width: 650px;
     border-radius: 12px;
