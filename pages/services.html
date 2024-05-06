@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hlegal | Services</title>
+    <link rel="icon" href="../src/images/homepage/BackgroundSymbol.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+    <div class="popup" id="popup">
+        <div class="popup__container">
+            <button class="popup__cross" id="popup-cross">
+                <i class='bx bx-x'></i>
+            </button>
+            <h2 class="popup__title">We would like to help you</h2>
+        </div>
+        <form action="https://fom.in.ua/echo" method="POST" class="popup__form">
+            <input class="popup__input" type="text" name="Name" placeholder="Name" required autofocus>
+
+            <textarea class="popup__textarea" name="Message" rows="3" placeholder="Message" required></textarea>
+
+            <p class="popup__text">How to answer you?</p>
+
+            <input class="popup__input" type="tel" name="Phone-number" placeholder="Phone number" required>
+
+            <input class="popup__input" type="email" name="Email" placeholder="Email" required>
+
+            <button class="popup__submit" type="submit">Send message</button>
+        </form>
+    </div>
+
+    <header class="header-services" style="background-color: darkblue; padding-bottom: 20px;">
+        <div class="toolbox">
+            <div class="menu menu--services">
+                <div class="menu__languages">
+                    <input class="menu__input" type="radio" name="lang" id="langUa">
+                    <label class="menu__label menu__label--services" for="langUa">
+                        <span class="menu__text">УК</span>
+                    </label>
+    
+                    <input class="menu__input" type="radio" name="lang" id="langRu">
+                    <label class="menu__label menu__label--services" for="langRu">
+                        <span class="menu__text">РУ</span>
+                    </label>
+    
+                    <input class="menu__input" type="radio" name="lang" id="langEn" checked>
+                    <label class="menu__label menu__label--services" for="langEn">
+                        <span class="menu__text">EN</span>
+                    </label>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="https://maps.app.goo.gl/pHJvB6JsJNBAtQay5" target="_blank">
+                            Kyiv, Mechnikova str., 14/1
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--services" href="tel:0800-211-927">
+                            0800 211 927
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--services" href="https://www.facebook.com/" target="_blank">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="tel:0800-211-927" class="menu__callback menu__callback--services">
+                    0800 211 927
+                </a>
+            </div>
+
+            <div class="logo">
+                <a href="../index.html" class="logo__link">
+                    <img src="../src/images/hlegal-logo.png" alt="hlegalLogo" class="logo__image">
+                </a>
+                <img src="../src/images/slash-logo.png" alt="slash" class="logo__image">
+                <p class="logo__text logo__text--services">services</p>
+            </div>
+
+            <nav class="navbar">
+                <button class="navbar__burger navbar__burger--services" id="navbarBurger">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <div class="navbar__container">
+                    <button class="navbar__cross" id="navbarCross">
+                        <i class='bx bx-x'></i>
+                    </button>
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="about.html" class="navbar__link">about us</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="services.html" class="navbar__link navbar__link--current">services</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="team.html" class="navbar__link">team</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="publications.html" class="navbar__link">publications</a>
+                        </li>
+                        <li class="navbar__item">
+                            <button class="navbar__button" id="popup-btn">contact</button>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar__sublist">
+                    <li class="navbar__subitem navbar__subitem--services">
+                        <a href="about.html" class="navbar__sublink navbar__sublink--services">about us</a>
+                    </li>
+                    <li class="navbar__subitem navbar__subitem--services navbar__subitem--current">
+                        <a href="services.html" class="navbar__sublink navbar__sublink--services navbar__sublink--current">services</a>
+                    </li>
+                    <li class="navbar__subitem navbar__subitem--services">
+                        <a href="team.html" class="navbar__sublink navbar__sublink--services">team</a>
+                    </li>
+                    <li class="navbar__subitem navbar__subitem--services">
+                        <a href="publications.html" class="navbar__sublink navbar__sublink--services">publications</a>
+                    </li>
+                    <li class="navbar__subitem navbar__subitem--services">
+                        <button class="navbar__subbutton navbar__subbutton--services" id="popupBtn">contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/popup.js"></script>
+</body>
+</html>

@@ -32,77 +32,106 @@
     </div>
 
     <header class="header-homepage">
-        <div class="menu">
-            <div class="menu__languages">
-                <input class="menu__input" type="radio" name="ukrainian" id="lang-1">
-                <label class="menu__label" for="lang-1">
-                    <span class="menu__text">УК</span>
-                </label>
-
-                <input class="menu__input" type="radio" name="russian" id="lang-2">
-                <label class="menu__label" for="lang-2">
-                    <span class="menu__text">РУ</span>
-                </label>
-
-                <input class="menu__input" type="radio" name="english" id="lang-3" checked>
-                <label class="menu__label" for="lang-3">
-                    <span class="menu__text">EN</span>
-                </label>
-            </div>
-            <ul class="menu__list">
-                <li class="list__item">
-                    <a class="menu__link" href="https://maps.app.goo.gl/pHJvB6JsJNBAtQay5" target="_blank">
-                        Kyiv, Mechnikova str., 14/1
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a class="menu__link" href="tel:0800-211-927">
+        <div class="hero">
+            <div class="toolbox">
+                <div class="menu menu--homepage">
+                    <div class="menu__languages">
+                        <input class="menu__input" type="radio" name="lang" id="langUa">
+                        <label class="menu__label menu__label--homepage" for="langUa">
+                            <span class="menu__text">УК</span>
+                        </label>
+        
+                        <input class="menu__input" type="radio" name="lang" id="langRu">
+                        <label class="menu__label menu__label--homepage" for="langRu">
+                            <span class="menu__text">РУ</span>
+                        </label>
+        
+                        <input class="menu__input" type="radio" name="lang" id="langEn" checked>
+                        <label class="menu__label menu__label--homepage" for="langEn">
+                            <span class="menu__text">EN</span>
+                        </label>
+                    </div>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="https://maps.app.goo.gl/pHJvB6JsJNBAtQay5" target="_blank">
+                                Kyiv, Mechnikova str., 14/1
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--homepage" href="tel:0800-211-927">
+                                0800 211 927
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--homepage" href="https://www.facebook.com/" target="_blank">
+                                <i class='bx bxl-facebook-circle'></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="tel:0800-211-927" class="menu__callback menu__callback--homepage">
                         0800 211 927
                     </a>
-                </li>
-                <li class="list__item">
-                    <a class="menu__link" href="https://www.facebook.com/" target="_blank">
-                        <i class='bx bxl-facebook-circle'></i>
+                </div>
+
+                <div class="logo">
+                    <a href="index.html" class="logo__link">
+                        <img src="src/images/hlegal-logo.png" alt="hlegalLogo" class="logo__image">
                     </a>
-                </li>
-            </ul>
-            <a href="tel:0800-211-927" class="menu__callback">
-                0800 211 927
-            </a>
+                    <img src="src/images/slash-logo.png" alt="slash" class="logo__image logo__image--homepage">
+                    <p class="logo__text"></p>
+                </div>
+
+                <nav class="navbar">
+                    <button class="navbar__burger navbar__burger--homepage" id="navbarBurger">
+                        <i class='bx bx-menu'></i>
+                    </button>
+                    <div class="navbar__container">
+                        <button class="navbar__cross" id="navbarCross">
+                            <i class='bx bx-x'></i>
+                        </button>
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a href="pages/about.html" class="navbar__link">about us</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="pages/services.html" class="navbar__link">services</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="pages/team.html" class="navbar__link">team</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="pages/publications.html" class="navbar__link">publications</a>
+                            </li>
+                            <li class="navbar__item">
+                                <button class="navbar__button" id="popup-btn">contact</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="navbar__sublist">
+                        <li class="navbar__subitem navbar__subitem--homepage">
+                            <a href="pages/about.html" class="navbar__sublink navbar__sublink--homepage">about us</a>
+                        </li>
+                        <li class="navbar__subitem navbar__subitem--homepage">
+                            <a href="pages/services.html" class="navbar__sublink navbar__sublink--homepage">services</a>
+                        </li>
+                        <li class="navbar__subitem navbar__subitem--homepage">
+                            <a href="pages/team.html" class="navbar__sublink navbar__sublink--homepage">team</a>
+                        </li>
+                        <li class="navbar__subitem navbar__subitem--homepage">
+                            <a href="pages/publications.html" class="navbar__sublink navbar__sublink--homepage">publications</a>
+                        </li>
+                        <li class="navbar__subitem navbar__subitem--homepage">
+                            <button class="navbar__subbutton navbar__subbutton--homepage" id="popupBtn">contact</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h2 class="hero__title">
+                your legal solutions provider
+            </h2>
+            <button class="hero__button" id="btnServices"></button>
         </div>
-        <nav class="navbar">
-            <div class="navbar__logo">
-                <img src="src/images/hlegal-logo.png" alt="logo" class="navbar__image">
-                <img src="src/images/slash-logo.png" alt="slash" class="navbar__image--special">
-                <p class="navbar__text"></p>
-            </div>
-            <input class="navbar__burger" type="checkbox" id="navbar-burger">
-            <label for="navbar-burger">
-                <i class='bx bx-menu'></i>
-            </label>
-            <div class="navbar__container">
-                <button class="navbar__cross" id="navbar-cross">
-                    <i class='bx bx-x'></i>
-                </button>
-                <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="pages/about.html" class="navbar__link">about us</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="" class="navbar__link">services</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="" class="navbar__link">team</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="" class="navbar__link">publications</a>
-                    </li>
-                    <li class="navbar__item">
-                        <button class="navbar__button" id="popup-btn">contact</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
     <main class="main-homepage">
