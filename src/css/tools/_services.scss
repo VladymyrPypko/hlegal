@@ -102,4 +102,20 @@
             grid-column: 1 / span 3;
         }
     }
+
+    @include desktop-hd {
+        padding-inline: 160px;
+    }
+}
+
+.services--mod {
+    margin-top: 30px;
+
+    .services__redirect {
+        display: none;
+    }
+
+    @include tablet-sd {
+        margin-top: 60px;
+    }
 }
