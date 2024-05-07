@@ -734,6 +734,7 @@ a {
   font-weight: 700;
   line-height: 27px;
   color: rgb(36, 163, 255);
+  transition: color 0.5s;
 }
 .services__link:focus-visible, .services__link:hover, .services__link:active {
   color: rgb(240, 20, 90);
@@ -806,7 +807,10 @@ a {
   border-radius: 50%;
   cursor: pointer;
   transform: rotateZ(0deg);
-  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, border-color 0.5s;
+}
+.header-homepage .hero__button:focus-visible, .header-homepage .hero__button:hover {
+  border-color: rgb(240, 20, 90);
 }
 .header-homepage .hero__button--active {
   transform: rotateZ(-90deg);

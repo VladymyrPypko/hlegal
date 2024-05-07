@@ -36,7 +36,13 @@
             border-radius: 50%;
             cursor: pointer;
             transform: rotateZ(0deg);
-            transition: transform .5s linear;
+            transition: transform .5s linear,
+                        border-color .5s;
+
+            &:focus-visible,
+            &:hover {
+                border-color: $color-accent;
+            }
 
             &--active {
                 transform: rotateZ(-90deg);

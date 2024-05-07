@@ -64,6 +64,7 @@
         font-weight: $font-weight-bold;
         line-height: 27px;
         color: $color-blue-100;
+        transition: color .5s;
 
         &:focus-visible,
         &:hover,
