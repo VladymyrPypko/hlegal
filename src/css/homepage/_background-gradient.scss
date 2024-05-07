@@ -2,7 +2,30 @@
 @use "../mixins" as *;
 
 .background-gradient {
+    position: relative;
     padding-block: 0px 60px;
     background: $gradient-supersoft;
     border-radius: 0px 0px 12px 12px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    &::before {
+        bottom: -10px;
+        right: 20px;
+        left: 20px;
+        background-color: rgba(202, 202, 219, 1);
+    }
+
+    &::after {
+        bottom: -20px;
+        right: 40px;
+        left: 40px;
+        background-color: rgba(231, 231, 242, 1);
+    }
 }

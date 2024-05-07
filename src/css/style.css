@@ -769,9 +769,28 @@ a {
 }
 
 .background-gradient {
+  position: relative;
   padding-block: 0px 60px;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
+}
+.background-gradient::before, .background-gradient::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+}
+.background-gradient::before {
+  bottom: -10px;
+  right: 20px;
+  left: 20px;
+  background-color: rgb(202, 202, 219);
+}
+.background-gradient::after {
+  bottom: -20px;
+  right: 40px;
+  left: 40px;
+  background-color: rgb(231, 231, 242);
 }
 
 .header-homepage .hero {
