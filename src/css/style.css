@@ -148,7 +148,7 @@ a {
 }
 @media (min-width: 768px) {
   .popup {
-    height: 612px;
+    max-height: 612px;
     width: 85%;
     max-width: 650px;
     border-radius: 12px;
@@ -484,6 +484,196 @@ a {
 @media (min-width: 1920px) {
   .toolbox {
     padding-inline: 160px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 30px;
+  padding-inline: 30px;
+  background-color: rgb(245, 245, 250);
+}
+.footer__line {
+  height: 2px;
+  width: 100%;
+  background-color: rgb(230, 230, 240);
+  margin-block: 0px 30px;
+}
+.footer__line--hidden {
+  display: none;
+}
+.footer .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-block: 0px 21px;
+}
+.footer .address__info {
+  font-size: 1rem;
+  line-height: 20px;
+  color: rgb(50, 50, 100);
+}
+.footer .address__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 1px;
+  color: rgb(36, 163, 255);
+  transition: color 0.5s;
+}
+.footer .address__link:focus-visible, .footer .address__link:hover {
+  color: rgb(0, 133, 255);
+}
+.footer .address__link:active {
+  color: rgb(0, 108, 207);
+}
+.footer .address__bull {
+  display: none;
+}
+.footer .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer .social__facebook {
+  width: 38px;
+  height: 38px;
+  font-size: 38px;
+  color: rgb(36, 163, 255);
+  transition: color 0.5s;
+}
+.footer .social__facebook:focus-visible, .footer .social__facebook:hover {
+  color: rgb(0, 133, 255);
+}
+.footer .social__facebook:active {
+  color: rgb(0, 108, 207);
+}
+.footer .social__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer .social__number {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgb(70, 70, 110);
+}
+.footer .social__number:focus-visible, .footer .social__number:hover, .footer .social__number:active {
+  color: rgb(240, 20, 90);
+}
+.footer .social__email {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgb(36, 163, 255);
+}
+.footer .social__email:focus-visible, .footer .social__email:hover {
+  color: rgb(0, 133, 255);
+}
+.footer .social__email:active {
+  color: rgb(0, 108, 207);
+}
+.footer .company {
+  margin-top: 30px;
+  font-size: 1rem;
+  line-height: 20px;
+  color: rgb(179, 179, 186);
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-inline: 60px;
+  }
+  .footer .address {
+    flex-direction: row;
+    margin-right: 95px;
+  }
+  .footer .address__bull {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 20px;
+    vertical-align: middle;
+    color: rgb(179, 179, 186);
+  }
+  .footer .social {
+    flex-direction: row;
+  }
+  .footer .social__contacts {
+    flex-direction: row;
+  }
+  .footer .social__bull {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 20px;
+    vertical-align: middle;
+    color: rgb(179, 179, 186);
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    display: grid;
+    grid-template-rows: 30px repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    justify-items: start;
+  }
+  .footer__line {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  .footer .address {
+    grid-row: 2;
+    grid-column: 1;
+    margin-block: 0px;
+    margin-right: 0px;
+  }
+  .footer .social {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .footer .company {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: end;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .footer {
+    padding-inline: 160px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer--mod {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer--mod .address {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .footer--mod .social {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .footer--mod .company {
+    grid-row: 1;
+    grid-column: 2;
   }
 }
 
