@@ -39,4 +39,27 @@
             cursor: pointer;
         }
     }
+
+    @include tablet-sd {
+        .hero {
+
+            &__title {
+                max-width: fit-content;
+                margin-block: 0px 120px;
+            }
+        }
+    }
+
+    @include tablet-hd {
+        .hero {
+            background-image: url('../images/homepage/BackgroundSymbol.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &__title {
+                margin-block: 0px 100px;
+            }
+        }
+    }
 }

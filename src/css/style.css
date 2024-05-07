@@ -712,4 +712,22 @@ a {
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50%;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .header-homepage .hero__title {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin-block: 0px 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .header-homepage .hero {
+    background-image: url("../images/homepage/BackgroundSymbol.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .header-homepage .hero__title {
+    margin-block: 0px 100px;
+  }
 }/*# sourceMappingURL=style.css.map */
