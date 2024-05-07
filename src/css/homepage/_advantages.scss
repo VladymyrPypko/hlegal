@@ -16,8 +16,13 @@
         padding-block: 30px 15px;
         padding-inline: 30px;
         overflow-x: auto;
+        scroll-behavior: smooth;
         scroll-snap-type: inline mandatory;
         scroll-padding-inline: 30px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &__button {

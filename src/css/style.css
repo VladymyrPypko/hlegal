@@ -754,8 +754,12 @@ a {
   padding-block: 30px 15px;
   padding-inline: 30px;
   overflow-x: auto;
+  scroll-behavior: smooth;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 30px;
+}
+.advantages__buttons::-webkit-scrollbar {
+  display: none;
 }
 .advantages__button {
   background: linear-gradient(to left, #F0145A 0%, #EF8080 100%);
