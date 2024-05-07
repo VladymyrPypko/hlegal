@@ -2,8 +2,6 @@
 @use "../mixins" as *;
 
 .header-homepage {
-    background: $gradient-supersoft;
-
     .hero {
         display: flex;
         flex-direction: column;
@@ -37,6 +35,12 @@
             border: 2px solid $color-white;
             border-radius: 50%;
             cursor: pointer;
+            transform: rotateZ(-90deg);
+            transition: transform .5s linear;
+
+            &--active {
+                transform: rotateZ(0deg);
+            }
         }
     }
 
@@ -52,9 +56,7 @@
 
     @include tablet-hd {
         .hero {
-            background-image: url('../images/homepage/BackgroundSymbol.png');
             background-size: contain;
-            background-position: center;
             background-repeat: no-repeat;
 
             &__title {

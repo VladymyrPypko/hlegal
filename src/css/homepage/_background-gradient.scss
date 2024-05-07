@@ -1,0 +1,7 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.background-gradient {
+    padding-block: 0px 60px;
+    background: $gradient-supersoft;
+}

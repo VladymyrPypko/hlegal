@@ -1,0 +1,66 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.advantages {
+    height: 420px;
+    transition: height .3s ease-in-out;
+
+    &--hidden {
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    &__buttons {
+        display: flex;
+        gap: 30px;
+        padding-block: 30px 15px;
+        padding-inline: 30px;
+        overflow-x: auto;
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 30px;
+    }
+
+    &__button {
+        background: $gradient-red-reversed;
+        -webkit-background-clip: text;
+                background-clip: text;
+        font-size: 30px;
+        font-weight: 700;
+        color: $color-grey-400;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: color .5s;
+        scroll-snap-align: start;
+
+        &:hover {
+            color: $color-accent;
+        }
+
+        &--active {
+            color: transparent;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-block: 15px 0px;
+        margin-inline: 30px;
+        padding-block: 30px 0px;
+        border-top: 4px solid rgba(255, 255, 255, 0.3);
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        line-height: 25px;
+        color: $color-white;
+    }
+
+    &__info {
+        font-size: 19px;
+        line-height: 30px;
+        color: $color-white;
+    }
+}

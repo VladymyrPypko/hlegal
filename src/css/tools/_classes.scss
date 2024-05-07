@@ -44,9 +44,9 @@
         font-size: 30px;
         font-weight: $font-weight-bold;
         background: $gradient-red-text;
-        background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+                background-clip: text;
+        color: transparent;
     }
 
     &__form {
@@ -678,6 +678,10 @@
             &:active {
                 color: $color-blue-300;
             }
+        }
+
+        &__bull {
+            display: none;
         }
     }
 
