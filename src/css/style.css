@@ -680,9 +680,97 @@ a {
   }
 }
 
+.services {
+  display: grid;
+  gap: 30px;
+  padding-block: 10px;
+  padding-inline: 30px;
+}
+.services__heading {
+  display: grid;
+  gap: 10px;
+}
+.services__redirect {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  width: 95px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(36, 163, 255);
+  transition: color 0.5s;
+}
+.services__redirect i {
+  font-size: 1.2rem;
+}
+.services__redirect:focus-visible, .services__redirect:hover, .services__redirect:active {
+  color: rgb(240, 20, 90);
+}
+.services__headline {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 30px;
+  font-weight: 700;
+  color: transparent;
+}
+.services__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.services__image {
+  aspect-ratio: 1;
+  width: 92px;
+  padding: 14px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+  margin-block: 0px 15px;
+}
+.services__link {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  color: rgb(36, 163, 255);
+}
+.services__link:focus-visible, .services__link:hover, .services__link:active {
+  color: rgb(240, 20, 90);
+}
+.services__info {
+  font-size: 16px;
+  line-height: 26px;
+  color: rgb(255, 255, 255);
+}
+@media (min-width: 768px) {
+  .services {
+    grid-template-rows: 120px repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding-inline: 60px;
+  }
+  .services__heading {
+    grid-column: 1/span 2;
+  }
+  .services__headline {
+    font-size: 38px;
+  }
+}
+@media (min-width: 1024px) {
+  .services {
+    grid-template-rows: 75px repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services__heading {
+    grid-column: 1/span 3;
+  }
+}
+
 .background-gradient {
   padding-block: 0px 60px;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
 }
 
 .header-homepage .hero {
@@ -741,7 +829,7 @@ a {
 }
 
 .advantages {
-  height: 420px;
+  height: 490px;
   transition: all 0.3s ease-in-out;
 }
 .advantages--hidden {

@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .advantages {
-    height: 420px;
+    height: 490px;
     transition: all .3s ease-in-out;
 
     &--hidden { // got to duplicate the value in order to keep js working
