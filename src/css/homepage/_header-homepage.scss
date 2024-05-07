@@ -35,11 +35,11 @@
             border: 2px solid $color-white;
             border-radius: 50%;
             cursor: pointer;
-            transform: rotateZ(-90deg);
+            transform: rotateZ(0deg);
             transition: transform .5s linear;
 
             &--active {
-                transform: rotateZ(0deg);
+                transform: rotateZ(-90deg);
             }
         }
     }

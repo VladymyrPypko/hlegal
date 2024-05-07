@@ -3,11 +3,12 @@
 
 .advantages {
     height: 420px;
-    transition: height .3s ease-in-out;
+    transition: all .3s ease-in-out;
 
-    &--hidden {
+    &--hidden { // got to duplicate the value in order to keep js working
         height: 0px;
         overflow: hidden;
+        opacity: 0;
     }
     
     &__buttons {
@@ -37,6 +38,7 @@
         transition: color .5s;
         scroll-snap-align: start;
 
+        &:focus-visible,
         &:hover {
             color: $color-accent;
         }
@@ -67,5 +69,112 @@
         font-size: 19px;
         line-height: 30px;
         color: $color-white;
+    }
+
+    @include tablet-sd {
+        height: 460px;
+
+        &--hidden { // got to duplicate the value in order to keep js working
+            height: 0px;
+            overflow: hidden;
+            opacity: 0;
+        }
+        
+        &__buttons {
+            padding-block: 60px 30px;
+            padding-inline: 60px;
+            scroll-padding-inline: 60px;
+        }
+    
+        &__button {
+            font-size: 38px;
+        }
+    
+        &__item {
+            margin-block: 30px 0px;
+            margin-inline: 60px;
+            padding-block: 60px;
+        }
+    
+        &__title {
+            font-size: 30px;
+            line-height: 37px;
+        }
+    }
+
+    @include tablet-hd {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 450px;
+        padding-inline: 60px;
+    
+        &--hidden { // got to duplicate the value in order to keep js working
+            height: 0px;
+            overflow: hidden;
+            opacity: 0;
+        }
+        
+        &__buttons {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 30px;
+            padding-block: 0px;
+            padding-inline: 60px;
+        }
+    
+        &__item {
+            flex-basis: 50%;
+            justify-content: center;
+            gap: 30px;
+            height: 320px;
+            margin-block: 65px;
+            margin-inline: 0px;
+            padding-inline: 60px 0px;
+            border-top: none;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    @include desktop-sd {
+        height: 480px;
+        padding-inline: 180px;
+    
+        &--hidden { // got to duplicate the value in order to keep js working
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        &__buttons {
+            flex-basis: 40%;
+        }
+
+        &__item {
+            flex-basis: 60%;
+        }
+    }
+
+    @include desktop-hd {
+        height: 480px;
+        padding-inline: 280px;
+        padding-block: 0px;
+    
+        &--hidden { // got to duplicate the value in order to keep js working
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        &__buttons {
+            flex-basis: 30%;
+        }
+
+        &__item {
+            flex-basis: 70%;
+        }
     }
 }
