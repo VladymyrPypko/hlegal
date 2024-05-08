@@ -2,7 +2,8 @@
 @use "../mixins" as *;
 
 .team {
-    margin-block: 50px 0px;
+    position: relative;
+    padding-block: 50px 106px;
     padding-inline: 30px;
 
     &__slider {
@@ -96,21 +97,26 @@
         font-size: 14px;
         color: $color-grey-400;
     }
-    
-    &__navigation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        padding-block: 30px;
-    }
 
     &__label {
+        position: absolute;
+        left: 50%;
+        bottom: 60px;
         padding: 8px;
         background-color: $color-blue-100;
         border-radius: 50%;
         opacity: .2;
+        transition: opacity .5s;
         cursor: pointer;
+        z-index: 10;
+
+        &[for="radio1"] {
+            transform: translateX(-31px);
+        }
+
+        &[for="radio3"] {
+            transform: translateX(31px);
+        }
 
         &:hover {
             opacity: .6;
@@ -127,5 +133,67 @@
 
     #radio3:checked ~ .first {
         margin-left: -40%;
+    }
+
+    #radio1:checked ~ .team__label[for="radio1"] {
+        opacity: 1;
+    }
+
+    #radio2:checked ~ .team__label[for="radio2"] {
+        opacity: 1;
+    }
+
+    #radio3:checked ~ .team__label[for="radio3"] {
+        opacity: 1;
+    }
+
+    @include tablet-sd {
+        position: relative;
+        padding-block: 80px 106px;
+        padding-inline: 60px;
+    
+        &__text {
+            font-size: 38px;
+        }
+    
+        &__name {
+            width: auto;
+        }
+    }
+
+    @include tablet-hd {
+        &__slide {
+            grid-template-columns: 45% 55%;
+        }
+
+        &__image {
+            height: 528px;
+        }
+
+        &__info {
+            justify-content: space-between;
+        }
+    }
+
+    @include desktop-sd {
+        &__slide {
+            grid-template-columns: 30% 70%;
+        }
+
+        &__image {
+            height: 344px;
+        }
+    }
+
+    @include desktop-hd {
+        padding-inline: 160px;
+
+        &__slide {
+            grid-template-columns: 25% 75%;
+        }
+
+        &__image {
+            height: 298px;
+        }
     }
 }
