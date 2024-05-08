@@ -1,0 +1,136 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.clients {
+    &__title {
+        margin-block: 0px 30px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        color: $color-main-300;
+    }
+
+    &__gallery {
+        display: grid;
+    }
+
+    &__item {
+        height: 120px;
+        
+        &:nth-of-type(1) {
+            background: url('../images/clients/hillel.png');
+            background-color: rgba(28, 66, 128, 1);
+        }
+
+        &:nth-of-type(2) {
+            background: url('../images/clients/wannabiz.png');
+            background-color: rgba(20, 54, 70, 1);
+        }
+
+        &:nth-of-type(3) {
+            background: url('../images/clients/tapgerine.png');
+            background-color: rgba(244, 139, 48, 1);
+        }
+
+        &:nth-of-type(4) {
+            background: url('../images/clients/3dlook.png');
+            background-color: rgba(158, 77, 195, 1);
+        }
+
+        &:nth-of-type(5) {
+            background: url('../images/clients/orangear.png');
+            background-color: rgba(253, 147, 57, 1);
+        }
+
+        &:nth-of-type(6) {
+            background: url('../images/clients/adtelligent.png');
+            background-color: rgba(226, 226, 228, 1);
+        }
+
+        &:nth-of-type(7) {
+            background: url('../images/clients/clickky.png');
+            background-color: rgba(199, 28, 54, 1);
+        }
+
+        &:nth-of-type(8) {
+            background: url('../images/clients/eco-leasing.png');
+            background-color: rgba(220, 243, 249, 1);
+        }
+
+        &:nth-of-type(9) {
+            background: url('../images/clients/infratek.png');
+            background-color: rgba(234, 234, 234, 1);
+        }
+
+        &:nth-of-type(10) {
+            background: url('../images/clients/city-park.png');
+            background-color: rgba(40, 34, 64, 1);
+        }
+
+        &:nth-of-type(11) {
+            background: url('../images/clients/artprint.png');
+            background-color: rgba(29, 69, 104, 1);
+        }
+
+        &:nth-of-type(12) {
+            background: url('../images/clients/ultimatecard.png');
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        &:nth-of-type(n) {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30vh;
+        }
+
+        &:nth-of-type(7),
+        &:nth-of-type(8),
+        &:nth-of-type(9),
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12) {
+            display: none;
+        }
+    }
+
+    @include tablet-sd {
+        &__gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        &__item {
+            &:nth-of-type(n) {
+                background-size: 30vh;
+            }
+    
+            &:nth-of-type(7),
+            &:nth-of-type(8),
+            &:nth-of-type(9),
+            &:nth-of-type(10),
+            &:nth-of-type(11),
+            &:nth-of-type(12) {
+                display: block;
+            }
+        }
+    }
+
+    @include tablet-hd {
+        &__gallery {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @include desktop-hd {
+        padding-inline: 100px;
+    }
+}
+
+// for services.html
+.clients--mod {
+    padding-block: 80px 0px;
+
+    @include desktop-hd {
+        padding-block: 80px 60px;
+    }
+}
