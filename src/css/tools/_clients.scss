@@ -119,6 +119,7 @@
 
     @include desktop-hd {
         padding-inline: 100px;
+        padding-block: 0px 60px;
 
         &__gallery {
             overflow: hidden;
