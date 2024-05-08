@@ -897,6 +897,10 @@ a {
   .clients {
     padding-inline: 100px;
   }
+  .clients__gallery {
+    overflow: hidden;
+    border-radius: 12px;
+  }
 }
 
 .clients--mod {
