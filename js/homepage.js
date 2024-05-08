@@ -45,7 +45,7 @@ document.querySelector('.advantages__buttons').addEventListener('click', (e) => 
     }
 });
 
-// advantages show-hide button
+// advantages/show-hide button
 const advantagesShowHide = document.getElementById('btnServices');
 
 advantagesShowHide.addEventListener('click', function(){
@@ -53,3 +53,14 @@ advantagesShowHide.addEventListener('click', function(){
     advantagesShowHide.classList.toggle('hero__button--active');
 })
 console.log(advantages);
+
+// team/slider
+let counter = 1;
+
+setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 3){
+        counter = 1;
+    }
+}, 5000);
