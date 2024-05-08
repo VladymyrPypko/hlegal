@@ -875,7 +875,7 @@ a {
 .clients__item:nth-of-type(n) {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30vh;
+  background-size: clamp(150px, 22dvh, 50%);
 }
 .clients__item:nth-of-type(7), .clients__item:nth-of-type(8), .clients__item:nth-of-type(9), .clients__item:nth-of-type(10), .clients__item:nth-of-type(11), .clients__item:nth-of-type(12) {
   display: none;
@@ -883,9 +883,6 @@ a {
 @media (min-width: 768px) {
   .clients__gallery {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .clients__item:nth-of-type(n) {
-    background-size: 30vh;
   }
   .clients__item:nth-of-type(7), .clients__item:nth-of-type(8), .clients__item:nth-of-type(9), .clients__item:nth-of-type(10), .clients__item:nth-of-type(11), .clients__item:nth-of-type(12) {
     display: block;

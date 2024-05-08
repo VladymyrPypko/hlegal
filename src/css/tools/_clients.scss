@@ -81,7 +81,7 @@
         &:nth-of-type(n) {
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 30vh;
+            background-size: clamp(150px, 22dvh, 50%);
         }
 
         &:nth-of-type(7),
@@ -100,10 +100,6 @@
         }
     
         &__item {
-            &:nth-of-type(n) {
-                background-size: 30vh;
-            }
-    
             &:nth-of-type(7),
             &:nth-of-type(8),
             &:nth-of-type(9),
