@@ -1724,4 +1724,42 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.posts__more {
+  padding-block: 18px;
+  padding-inline: 30px;
+  margin-inline: auto;
+  background-color: rgb(36, 163, 255);
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.5s;
+}
+.posts__more:focus-visible, .posts__more:hover {
+  background-color: rgb(0, 133, 255);
+}
+.posts__more:active {
+  background-color: rgb(0, 108, 207);
+}
+@media (min-width: 768px) {
+  .posts {
+    padding-inline: 60px;
+  }
+  .posts .news,
+  .posts .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .posts .news,
+  .posts .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .posts {
+    padding-inline: 160px;
+  }
 }/*# sourceMappingURL=style.css.map */

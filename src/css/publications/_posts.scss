@@ -185,4 +185,47 @@
             background-size: cover;
         }
     }
+
+    &__more {
+        padding-block: 18px;
+        padding-inline: 30px;
+        margin-inline: auto;
+        background-color: $color-blue-100;
+        box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        transition: background-color .5s;
+
+        &:focus-visible,
+        &:hover {
+            background-color: $color-blue-200;
+        }
+
+        &:active {
+            background-color: $color-blue-300;
+        }
+    }
+
+    @include tablet-sd {
+        padding-inline: 60px;
+    
+        .news,
+        .articles {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include tablet-hd {
+    
+        .news,
+        .articles {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @include tablet-hd {
+        padding-inline: 160px;
+    }
 }
