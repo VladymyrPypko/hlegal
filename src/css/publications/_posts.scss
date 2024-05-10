@@ -61,6 +61,14 @@
         transform: translateX(115px);
     }
 
+    .switch:checked ~ .posts__gallery > .news {
+        display: none;
+    }
+
+    .switch:not(:checked) ~ .posts__gallery > .articles {
+        display: none;
+    }
+
     .news,
     .articles {
         display: grid;
@@ -148,8 +156,6 @@
     }
 
     .articles {
-        display: none;
-
         &__item {
             display: grid;
             grid-template-rows: 200px 1fr;
