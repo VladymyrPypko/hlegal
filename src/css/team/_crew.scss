@@ -1,0 +1,157 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.crew {
+    display: grid;
+    gap: 30px;
+    padding-inline: 30px;
+
+    &__title {
+        background: $gradient-red-text;
+        -webkit-background-clip: text;
+                background-clip: text;
+        font-size: 30px;
+        font-weight: $font-weight-bold;
+        line-height: 37px;
+        color: transparent;
+    }
+
+    &__gallery {
+        display: grid;
+        gap: 30px;
+    }
+
+    &__member {
+        display: grid;
+        grid-template-rows: 300px 1fr;
+        gap: 15px;
+    }
+
+    &__member:nth-of-type(1) &__image {
+        background: url('../images/team/Team-1.png');
+    }
+
+    &__member:nth-of-type(2) &__image {
+        background: url('../images/team/Team-2.png');
+    }
+
+    &__member:nth-of-type(3) &__image {
+        background: url('../images/team/Team-3.png');
+    }
+
+    &__member:nth-of-type(4) &__image {
+        background: url('../images/team/Team-4.png');
+    }
+
+    &__member:nth-of-type(5) &__image {
+        background: url('../images/team/Team-5.png');
+    }
+
+    &__member:nth-of-type(6) &__image {
+        background: url('../images/team/Team-6.png');
+    }
+
+    &__member:nth-of-type(n) &__image {
+        border-radius: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__info {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 40px;
+        align-items: start;
+        gap: 5px;
+    }
+
+    &__name {
+        width: fit-content;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        line-height: 20px;
+        text-wrap: nowrap;
+        color: $color-main-300;
+        transition: color .5s;
+
+        &:focus-visible,
+        &:hover,
+        &:active {
+            color: $color-accent;
+        }
+
+        &:focus-visible ~ .crew__link i,
+        &:hover ~ .crew__link i,
+        &:active ~ .crew__link i {
+            color: $color-accent;
+        }
+    }
+
+    &__position {
+        font-size: 14px;
+        line-height: 22px;
+        text-wrap: nowrap;
+        color: $color-grey-400;
+    }
+
+    &__link {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+        align-self: start;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: 32px;
+        background-color: $color-grey-100;
+        border-radius: 50%;
+        
+        & i {
+            font-size: 2rem;
+            font-weight: 100;
+            color: $color-blue-100;
+            transition: color .5s;
+        }
+
+        &:focus-visible i,
+        &:hover i,
+        &:active i {
+            color: $color-accent;
+        }
+    }
+
+    @include tablet-sd {
+        gap: 60px;
+        padding-inline: 60px;
+    
+        &__title {
+            font-size: 38px;
+            line-height: 47px;
+        }
+    
+        &__gallery {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+    
+        &__member {
+            grid-template-rows: 400px 1fr;
+        }
+    }
+
+    @include tablet-hd {
+        &__title {
+            padding-inline: 120px;
+        }
+
+        &__gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @include desktop-hd {
+        padding-inline: 160px;
+    }
+}

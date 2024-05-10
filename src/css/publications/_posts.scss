@@ -1,0 +1,45 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.posts {
+    .switch {
+        display: none;
+    }
+
+    .news-articles {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 2px;
+        height: 42px;
+        width: 232px;
+        margin-inline: auto;
+        padding: 2px;
+        background-color: $color-grey-300;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        color: $color-main-300;
+
+        &__toggle {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            justify-self: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 38px;
+            width: 113px;
+            background-color: $color-white;
+            border-radius: 10px;
+            transition: transform .3s;
+        }
+    }
+
+    .switch:checked + .news-articles .news-articles__toggle {
+        transform: translateX(115px);
+    }
+}

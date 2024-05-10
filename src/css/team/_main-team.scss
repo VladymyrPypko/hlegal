@@ -1,0 +1,10 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.main-team {
+    padding-block: 30px 60px;
+
+    @include tablet-sd {
+        padding-block: 60px 60px;
+    }
+}

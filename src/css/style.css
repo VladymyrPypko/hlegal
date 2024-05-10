@@ -986,6 +986,10 @@ a {
   font-weight: 700;
   line-height: 20px;
   color: rgb(36, 163, 255);
+  transition: color 0.5s;
+}
+.publications__link:focus-visible, .publications__link:hover, .publications__link:active {
+  color: rgb(240, 20, 90);
 }
 .publications__date {
   text-transform: uppercase;
@@ -1417,4 +1421,180 @@ a {
   .team__image {
     height: 298px;
   }
+}
+
+.main-team {
+  padding-block: 30px 60px;
+}
+@media (min-width: 768px) {
+  .main-team {
+    padding-block: 60px 60px;
+  }
+}
+
+.crew {
+  display: grid;
+  gap: 30px;
+  padding-inline: 30px;
+}
+.crew__title {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  color: transparent;
+}
+.crew__gallery {
+  display: grid;
+  gap: 30px;
+}
+.crew__member {
+  display: grid;
+  grid-template-rows: 300px 1fr;
+  gap: 15px;
+}
+.crew__member:nth-of-type(1) .crew__image {
+  background: url("../images/team/Team-1.png");
+}
+.crew__member:nth-of-type(2) .crew__image {
+  background: url("../images/team/Team-2.png");
+}
+.crew__member:nth-of-type(3) .crew__image {
+  background: url("../images/team/Team-3.png");
+}
+.crew__member:nth-of-type(4) .crew__image {
+  background: url("../images/team/Team-4.png");
+}
+.crew__member:nth-of-type(5) .crew__image {
+  background: url("../images/team/Team-5.png");
+}
+.crew__member:nth-of-type(6) .crew__image {
+  background: url("../images/team/Team-6.png");
+}
+.crew__member:nth-of-type(n) .crew__image {
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.crew__info {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 40px;
+  align-items: start;
+  gap: 5px;
+}
+.crew__name {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-wrap: nowrap;
+  color: rgb(50, 50, 100);
+  transition: color 0.5s;
+}
+.crew__name:focus-visible, .crew__name:hover, .crew__name:active {
+  color: rgb(240, 20, 90);
+}
+.crew__name:focus-visible ~ .crew__link i, .crew__name:hover ~ .crew__link i, .crew__name:active ~ .crew__link i {
+  color: rgb(240, 20, 90);
+}
+.crew__position {
+  font-size: 14px;
+  line-height: 22px;
+  text-wrap: nowrap;
+  color: rgb(179, 179, 186);
+}
+.crew__link {
+  grid-row: 1/span 2;
+  grid-column: 2;
+  align-self: start;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  background-color: rgb(245, 245, 250);
+  border-radius: 50%;
+}
+.crew__link i {
+  font-size: 2rem;
+  font-weight: 100;
+  color: rgb(36, 163, 255);
+  transition: color 0.5s;
+}
+.crew__link:focus-visible i, .crew__link:hover i, .crew__link:active i {
+  color: rgb(240, 20, 90);
+}
+@media (min-width: 768px) {
+  .crew {
+    gap: 60px;
+    padding-inline: 60px;
+  }
+  .crew__title {
+    font-size: 38px;
+    line-height: 47px;
+  }
+  .crew__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+  .crew__member {
+    grid-template-rows: 400px 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .crew__title {
+    padding-inline: 120px;
+  }
+  .crew__gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1920px) {
+  .crew {
+    padding-inline: 160px;
+  }
+}
+
+.posts .switch {
+  display: none;
+}
+.posts .news-articles {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 2px;
+  height: 42px;
+  width: 232px;
+  margin-inline: auto;
+  padding: 2px;
+  background-color: rgb(230, 230, 240);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(50, 50, 100);
+}
+.posts .news-articles__toggle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 113px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.posts .switch:checked + .news-articles .news-articles__toggle {
+  transform: translateX(115px);
 }/*# sourceMappingURL=style.css.map */
