@@ -191,6 +191,7 @@ a {
   font-weight: 700;
   letter-spacing: 1px;
   color: rgb(179, 179, 186);
+  transition: all 0.5s ease-out;
   cursor: pointer;
 }
 .toolbox .menu__label--services, .toolbox .menu__label--homepage {
@@ -1561,6 +1562,19 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .main-publications {
+    margin-block: 60px 0px;
+  }
+}
+
+.posts {
+  display: grid;
+  gap: 30px;
+  padding-block: 30px;
+  padding-inline: 30px;
+  background-color: rgb(245, 245, 250);
+}
 .posts .switch {
   display: none;
 }
@@ -1581,20 +1595,133 @@ a {
   font-weight: 700;
   color: rgb(50, 50, 100);
 }
-.posts .news-articles__toggle {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  justify-self: start;
+.posts .news-articles__news, .posts .news-articles__articles, .posts .news-articles__toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 38px;
   width: 113px;
-  background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.posts .news-articles__news:hover, .posts .news-articles__articles:hover {
+  background-color: rgb(245, 245, 250);
+}
+.posts .news-articles__toggle {
+  justify-self: start;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.3s ease-out;
 }
 .posts .switch:checked + .news-articles .news-articles__toggle {
   transform: translateX(115px);
+}
+.posts .news,
+.posts .articles {
+  display: grid;
+  gap: 30px;
+}
+.posts .news__item,
+.posts .articles__item {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.posts .news__info,
+.posts .articles__info {
+  display: grid;
+  gap: 15px;
+  align-content: baseline;
+  padding-block: 30px;
+  padding-inline: 30px;
+}
+.posts .news__link,
+.posts .articles__link {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgb(36, 163, 255);
+  transition: color 0.5s;
+}
+.posts .news__link:focus-visible, .posts .news__link:hover, .posts .news__link:active,
+.posts .articles__link:focus-visible,
+.posts .articles__link:hover,
+.posts .articles__link:active {
+  color: rgb(240, 20, 90);
+}
+.posts .news__date,
+.posts .articles__date {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(179, 179, 186);
+}
+.posts .news__line,
+.posts .articles__line {
+  height: 4px;
+  background-color: rgb(230, 230, 240);
+}
+.posts .news__text,
+.posts .articles__text {
+  font-size: 14px;
+  line-height: 22px;
+  color: rgb(0, 0, 0);
+}
+.posts .news__item:not(:last-of-type) {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+}
+.posts .news__item:nth-of-type(1) .news__image {
+  background: url("../images/publications/Publication-1.png");
+}
+.posts .news__item:nth-of-type(2) .news__image {
+  background: url("../images/publications/Publication-2.png");
+}
+.posts .news__item:nth-of-type(3) .news__image {
+  background: url("../images/publications/Publication-3.png");
+}
+.posts .news__item:nth-of-type(4) .news__image {
+  background: url("../images/publications/Publication-4.png");
+}
+.posts .news__item:nth-of-type(5) .news__image {
+  background: url("../images/publications/Publication-5.png");
+}
+.posts .news__item:not(:last-of-type):nth-of-type(n) .news__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.posts .articles {
+  display: none;
+}
+.posts .articles__item {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+}
+.posts .articles__item:nth-of-type(1) .articles__image {
+  background: url("../images/publications/articles/CriminalDefenseStrategies.png");
+}
+.posts .articles__item:nth-of-type(2) .articles__image {
+  background: url("../images/publications/articles/Cybersecurity.jpg");
+}
+.posts .articles__item:nth-of-type(3) .articles__image {
+  background: url("../images/publications/articles/Claims.jpg");
+}
+.posts .articles__item:nth-of-type(4) .articles__image {
+  background: url("../images/publications/articles/Discrimination.png");
+}
+.posts .articles__item:nth-of-type(5) .articles__image {
+  background: url("../images/publications/articles/RealEstate.png");
+}
+.posts .articles__item:nth-of-type(6) .articles__image {
+  background: url("../images/publications/articles/IntellectualPropertyRights.png");
+}
+.posts .articles__item:nth-of-type(n) .articles__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

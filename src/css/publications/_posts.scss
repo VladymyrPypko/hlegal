@@ -2,6 +2,12 @@
 @use "../mixins" as *;
 
 .posts {
+    display: grid;
+    gap: 30px;
+    padding-block: 30px;
+    padding-inline: 30px;
+    background-color: $color-grey-100;
+
     .switch {
         display: none;
     }
@@ -23,23 +29,160 @@
         font-weight: $font-weight-bold;
         color: $color-main-300;
 
+        &__news,
+        &__articles,
         &__toggle {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            justify-self: start;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 38px;
             width: 113px;
-            background-color: $color-white;
             border-radius: 10px;
-            transition: transform .3s;
+            transition: background-color .5s;
+            cursor: pointer;
+        }
+
+        &__news:hover,
+        &__articles:hover {
+            background-color: $color-grey-100;
+        }
+
+        &__toggle {
+            justify-self: start;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background-color: $color-white;
+            transition: transform .3s ease-out;
         }
     }
 
     .switch:checked + .news-articles .news-articles__toggle {
         transform: translateX(115px);
+    }
+
+    .news,
+    .articles {
+        display: grid;
+        gap: 30px;
+
+        &__item {
+            background-color: $color-white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        &__info {
+            display: grid;
+            gap: 15px;
+            align-content: baseline;
+            padding-block: 30px;
+            padding-inline: 30px;
+        }
+
+        &__link {
+            font-size: 1rem;
+            font-weight: $font-weight-bold;
+            line-height: 20px;
+            color: $color-blue-100;
+            transition: color .5s;
+    
+            &:focus-visible,
+            &:hover,
+            &:active {
+                color: $color-accent;
+            }
+        }
+
+        &__date {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: $font-weight-bold;
+            letter-spacing: 1px;
+            color: $color-grey-400;
+        }
+
+        &__line {
+            height: 4px;
+            background-color: $color-grey-300;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            color: $color-black;
+        }
+    }
+
+    .news {
+        &__item:not(:last-of-type) {
+            display: grid;
+            grid-template-rows: 200px 1fr;
+        }
+        
+        &__item:nth-of-type(1) .news__image {
+            background: url('../images/publications/Publication-1.png');
+        }
+        
+        &__item:nth-of-type(2) .news__image {
+            background: url('../images/publications/Publication-2.png');
+        }
+        
+        &__item:nth-of-type(3) .news__image {
+            background: url('../images/publications/Publication-3.png');
+        }
+
+        &__item:nth-of-type(4) .news__image {
+            background: url('../images/publications/Publication-4.png');
+        }
+
+        &__item:nth-of-type(5) .news__image {
+            background: url('../images/publications/Publication-5.png');
+        }
+        
+        &__item:not(:last-of-type):nth-of-type(n) .news__image {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .articles {
+        display: none;
+
+        &__item {
+            display: grid;
+            grid-template-rows: 200px 1fr;
+        }
+
+        &__item:nth-of-type(1) .articles__image {
+            background: url('../images/publications/articles/CriminalDefenseStrategies.png');
+        }
+        
+        &__item:nth-of-type(2) .articles__image {
+            background: url('../images/publications/articles/Cybersecurity.jpg');
+        }
+        
+        &__item:nth-of-type(3) .articles__image {
+            background: url('../images/publications/articles/Claims.jpg');
+        }
+
+        &__item:nth-of-type(4) .articles__image {
+            background: url('../images/publications/articles/Discrimination.png');
+        }
+
+        &__item:nth-of-type(5) .articles__image {
+            background: url('../images/publications/articles/RealEstate.png');
+        }
+
+        &__item:nth-of-type(6) .articles__image {
+            background: url('../images/publications/articles/IntellectualPropertyRights.png');
+        }
+        
+        &__item:nth-of-type(n) .articles__image {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
     }
 }

@@ -1,2 +1,9 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+.main-publications {
+
+    @include tablet-sd {
+        margin-block: 60px 0px;
+    }
+}

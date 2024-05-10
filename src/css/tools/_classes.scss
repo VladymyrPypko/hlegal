@@ -184,6 +184,7 @@
             font-weight: $font-weight-bold;
             letter-spacing: 1px;
             color: $color-grey-400;
+            transition: all .5s ease-out;
             cursor: pointer;
             
             &--services,
