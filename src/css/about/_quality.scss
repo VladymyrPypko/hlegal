@@ -1,0 +1,62 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.quality {
+    display: grid;
+    gap: 30px;
+    padding-block: 30px 60px;
+    padding-inline: 30px;
+
+    &__info {
+        display: grid;
+        gap: 28px;
+    }
+
+    &__text {
+        font-size: 19px;
+        line-height: 30px;
+        color: $color-black;
+    }
+
+    &__title {
+        width: 15ch;
+        background: $gradient-red-text;
+        -webkit-background-clip: text;
+                background-clip: text;
+        font-size: 30px;
+        font-weight: $font-weight-bold;
+        line-height: 37px;
+        color: transparent;
+    }
+
+    @include tablet-sd {
+        padding-block: 60px;
+        padding-inline: 60px;
+    
+        &__title {
+            width: 24ch;
+            font-size: 38px;
+            line-height: 47px;
+        }
+    }
+
+    @include tablet-hd {
+        grid-template-columns: 54% 46%;
+        gap: 60px;
+        
+        &__title {
+            align-self: start;
+            width: 15ch;
+        }
+    }
+
+    @include desktop-sd {
+        grid-template-columns: 62% 38%;
+        padding-inline: 180px;
+    }
+
+    @include desktop-hd {
+        grid-template-columns: 69% 31%;
+        padding-inline: 280px;
+    }
+}

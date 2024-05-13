@@ -1,0 +1,123 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.about {
+    display: grid;
+    gap: 30px;
+    padding-block: 0px 30px;
+    padding-inline: 30px;
+
+    .experience {
+        display: grid;
+        gap: 28px;
+
+        &__title {
+            width: 15ch;
+            background: $gradient-red-text;
+            -webkit-background-clip: text;
+                    background-clip: text;
+            font-size: 30px;
+            line-height: 37px;
+            font-weight: $font-weight-bold;
+            color: transparent;
+        }
+
+        &__text {
+            font-size: 19px;
+            line-height: 30px;
+            color: $color-black;
+        }
+    }
+
+    .benefits {
+        display: grid;
+        gap: 40px;
+        padding-inline: 34px 0px;
+        border-left: 4px solid $color-grey-300;
+
+        &__item {
+            display: grid;
+            gap: 10px;
+        }
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &__image {
+            width: 32px;
+            aspect-ratio: 1;
+        }
+
+        &__number {
+            background: $gradient-red-text;
+            -webkit-background-clip: text;
+                    background-clip: text;
+            font-size: 36px;
+            font-weight: $font-weight-bold;
+            color: transparent;
+        }
+
+        &__info {
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-main-300;
+        }
+    }
+
+    @include tablet-sd {
+        padding-block: 0px 60px;
+        padding-inline: 60px;
+    
+        .experience {
+
+            &__title {
+                width: 25ch;
+                font-size: 38px;
+                line-height: 47px;
+            }
+        }
+    }
+
+    @include tablet-hd {
+        grid-template-columns: 54% 46%;
+
+        .experience {
+
+            &__title {
+                width: 19ch;
+            }
+        }
+
+        .benefits {
+            align-self: start;
+        }
+    }
+
+    @include desktop-sd {
+        grid-template-columns: 62% 38%;
+        padding-inline: 180px;
+
+        .experience {
+            align-self: start;
+
+            &__title {
+                width: 24ch;
+            }
+        }
+    }
+
+    @include desktop-hd {
+        grid-template-columns: 69% 31%;
+        padding-inline: 280px;
+
+        .experience {
+
+            &__title {
+                width: fit-content;
+            }
+        }
+    }
+}

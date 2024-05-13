@@ -30,18 +30,20 @@
             background-color: transparent;
             background-image: url('../images/homepage/chevron.png');
             background-size: 18px;
-            background-position: center;
             background-repeat: no-repeat;
+            background-position: center;
             border: 2px solid $color-white;
             border-radius: 50%;
             cursor: pointer;
             transform: rotateZ(0deg);
             transition: transform .3s,
-                        border-color .5s;
+                        border-color .5s,
+                        background-image .5s;
 
             &:focus-visible,
             &:hover {
                 border-color: $color-accent;
+                background-image: url('../images/homepage/chevronAccent.png');
             }
 
             &--active {

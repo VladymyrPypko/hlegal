@@ -1,6 +1,7 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
+// toggle works by css now instead of js
 .posts {
     display: grid;
     gap: 30px;
