@@ -1,0 +1,296 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.achievements {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-block: 30px 46px;
+    padding-inline: 60px;
+    background-color: $color-grey-100;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        letter-spacing: 1px;
+        color: $color-main-300;
+    }
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__slider--mobile {
+        width: 255px;
+        border-radius: 12px;
+    }
+
+    &__slider--desktop {
+        display: none;
+    }
+
+    &__slides {
+        display: flex;
+    }
+    
+    &__slider--mobile > &__slides {
+        width: 1530px;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__slide {
+        transition: all 2s;
+    }
+    
+    &__slider--mobile > &__slides > &__slide {
+        width: 255px;
+    }
+
+    &__logo {
+        background-color: $color-white;
+    }
+    
+    &__slider--mobile > &__slides > &__slide > &__logo {
+        height: 90px;
+    }
+    
+    &__slider--mobile > &__slides > &__slide:nth-of-type(n) > &__logo {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 10vh;
+    }
+
+    &__label {
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        padding: 8px;
+        background-color: $color-blue-100;
+        border-radius: 50%;
+        opacity: .2;
+        transition: opacity .5s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .6;
+        }
+
+        &[for="card1"] {
+            transform: translateX(-88px);
+        }
+
+        &[for="card2"] {
+            transform: translateX(-58px);
+        }
+
+        &[for="card3"] {
+            transform: translateX(-28px);
+        }
+
+        &[for="card4"] {
+            transform: translateX(2px);
+        }
+
+        &[for="card5"] {
+            transform: translateX(32px);
+        }
+
+        &[for="card6"] {
+            transform: translateX(62px);
+        }
+
+        &[for="cardBlock1"] {
+            transform: translateX(-38px);
+        }
+
+        &[for="cardBlock2"] {
+            transform: translateX(-8px);
+        }
+
+        &[for="cardBlock3"] {
+            transform: translateX(22px);
+        }
+    }
+
+    #card1:checked ~ .first-card {
+        margin-left: 0px;
+    }
+
+    #card2:checked ~ .first-card {
+        margin-left: -255px;
+    }
+
+    #card3:checked ~ .first-card {
+        margin-left: -510px;
+    }
+
+    #card4:checked ~ .first-card {
+        margin-left: -765px;
+    }
+
+    #card5:checked ~ .first-card {
+        margin-left: -1020px;
+    }
+
+    #card6:checked ~ .first-card {
+        margin-left: -1275px;
+    }
+
+    #card1:checked ~ .achievements__label[for="card1"],
+    #card2:checked ~ .achievements__label[for="card2"],
+    #card3:checked ~ .achievements__label[for="card3"],
+    #card4:checked ~ .achievements__label[for="card4"],
+    #card5:checked ~ .achievements__label[for="card5"],
+    #card6:checked ~ .achievements__label[for="card6"],
+    #cardBlock1:checked ~ .achievements__label[for="cardBlock1"],
+    #cardBlock2:checked ~ .achievements__label[for="cardBlock2"],
+    #cardBlock3:checked ~ .achievements__label[for="cardBlock3"] {
+        opacity: 1;
+    }
+
+    @include tablet-sd {
+    
+        &__slider--mobile {
+            display: none;
+        }
+    
+        &__slider--desktop {
+            display: block;
+            width: 648px;
+        }
+
+        &__slider--desktop > &__slides {
+            gap: 40px;
+            width: 2024px;
+        }
+
+        &__slider--desktop > &__slides > &__slide {
+            display: flex;
+            gap: 40px;
+            width: 648px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide > &__logo {
+            height: 90px;
+            width: 132px;
+            border-radius: 12px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide:nth-of-type(n) > &__logo {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 70%;
+        }
+
+        #cardBlock1:checked ~ .first-block {
+            margin-left: 0px;
+        }
+    
+        #cardBlock2:checked ~ .first-block {
+            margin-left: -688px;
+        }
+    
+        #cardBlock3:checked ~ .first-block {
+            margin-left: -1376px;
+        }
+    }
+
+    @include tablet-hd {
+    
+        &__slider--desktop {
+            width: 904px;
+        }
+
+        &__slider--desktop > &__slides {
+            width: 2792px;
+        }
+
+        &__slider--desktop > &__slides > &__slide {
+            width: 904px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide > &__logo {
+            height: 110px;
+            width: 196px;
+        }
+    
+        #cardBlock2:checked ~ .first-block {
+            margin-left: -944px;
+        }
+    
+        #cardBlock3:checked ~ .first-block {
+            margin-left: -1888px;
+        }
+    }
+
+    @include desktop-sd {
+    
+        &__slider--desktop {
+            width: 1320px;
+        }
+
+        &__slider--desktop > &__slides {
+            width: 4040px;
+        }
+
+        &__slider--desktop > &__slides > &__slide {
+            width: 1320px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide > &__logo {
+            height: 110px;
+            width: 300px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide:nth-of-type(n) > &__logo {
+            background-size: 40%;
+        }
+    
+        #cardBlock2:checked ~ .first-block {
+            margin-left: -1360px;
+        }
+    
+        #cardBlock3:checked ~ .first-block {
+            margin-left: -2720px;
+        }
+    }
+
+    @include desktop-hd {
+        padding-inline: 160px;
+
+        &__slider--desktop {
+            width: 1600px;
+        }
+
+        &__slider--desktop > &__slides {
+            width: 4880px;
+        }
+
+        &__slider--desktop > &__slides > &__slide {
+            width: 1600px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide > &__logo {
+            height: 110px;
+            width: 370px;
+        }
+        
+        &__slider--desktop > &__slides > &__slide:nth-of-type(n) > &__logo {
+            background-size: 30%;
+        }
+    
+        #cardBlock2:checked ~ .first-block {
+            margin-left: -1640px;
+        }
+    
+        #cardBlock3:checked ~ .first-block {
+            margin-left: -3280px;
+        }
+    }
+}

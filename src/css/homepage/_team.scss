@@ -135,14 +135,8 @@
         margin-left: -40%;
     }
 
-    #radio1:checked ~ .team__label[for="radio1"] {
-        opacity: 1;
-    }
-
-    #radio2:checked ~ .team__label[for="radio2"] {
-        opacity: 1;
-    }
-
+    #radio1:checked ~ .team__label[for="radio1"],
+    #radio2:checked ~ .team__label[for="radio2"],
     #radio3:checked ~ .team__label[for="radio3"] {
         opacity: 1;
     }
