@@ -152,6 +152,7 @@ a {
     width: 85%;
     max-width: 650px;
     border-radius: 12px;
+    box-shadow: 0px 0px 30px rgb(179, 179, 186);
   }
 }
 
@@ -275,6 +276,7 @@ a {
   background-color: rgb(255, 255, 255);
   transform: translateY(100vh);
   transition: transform 0.7s ease-in-out;
+  box-shadow: 0px 0px 30px rgb(179, 179, 186);
   z-index: 9999;
 }
 .toolbox .navbar__cross {
