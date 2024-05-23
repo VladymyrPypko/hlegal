@@ -192,6 +192,11 @@
             &--homepage {
                 color: $color-white;
             }
+
+            &:focus-visible,
+            &:hover {
+                background-color: $color-main-100;
+            }
         }
     
         &__list {
@@ -203,6 +208,12 @@
             font-weight: $font-weight-bold;
             line-height: 20px;
             color: $color-grey-400;
+            transition: color .5s;
+
+            &:focus-visible,
+            &:hover {
+                color: $color-accent;
+            }
         }
 
         &__callback--services,
@@ -263,6 +274,7 @@
             font-size: 2rem;
             font-weight: 100;
             color: $color-main-300;
+            cursor: pointer;
             
             &--services,
             &--homepage {
@@ -292,6 +304,10 @@
             transition: transform .7s ease-in-out;
             box-shadow: 0px 0px 30px $color-grey-400;
             z-index: 9999;
+
+            &--active {
+                transform: translateY(0);
+            }
         }
     
         &__cross {
@@ -305,6 +321,7 @@
             font-weight: 100;
             color: rgba(236, 111, 93, 1);
             transition: background-color .5s;
+            cursor: pointer;
     
             &:active {
                 background-color: $color-grey-300;
@@ -333,6 +350,14 @@
             font-weight: $font-weight-bold;
             color: $color-blue-100;
             transition: background-color .5s;
+            cursor: pointer;
+        }
+
+        &__link:focus-visible,
+        &__link:hover,
+        &__button:focus-visible,
+        &__button:hover {
+            background-color: $color-grey-200;
         }
     
         &__link:active,
@@ -659,6 +684,7 @@
             font-weight: $font-weight-bold;
             line-height: 20px;
             color: $color-main-200;
+            transition: color .5s;
 
             &:focus-visible,
             &:hover,
@@ -672,6 +698,7 @@
             font-weight: $font-weight-bold;
             line-height: 20px;
             color: $color-blue-100;
+            transition: color .5s;
 
             &:focus-visible,
             &:hover {

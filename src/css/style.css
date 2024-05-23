@@ -198,6 +198,9 @@ a {
 .toolbox .menu__label--services, .toolbox .menu__label--homepage {
   color: rgb(255, 255, 255);
 }
+.toolbox .menu__label:focus-visible, .toolbox .menu__label:hover {
+  background-color: rgb(104, 104, 135);
+}
 .toolbox .menu__list {
   display: none;
 }
@@ -206,6 +209,10 @@ a {
   font-weight: 700;
   line-height: 20px;
   color: rgb(179, 179, 186);
+  transition: color 0.5s;
+}
+.toolbox .menu__callback:focus-visible, .toolbox .menu__callback:hover {
+  color: rgb(240, 20, 90);
 }
 .toolbox .menu__callback--services, .toolbox .menu__callback--homepage {
   color: rgb(255, 255, 255);
@@ -253,6 +260,7 @@ a {
   font-size: 2rem;
   font-weight: 100;
   color: rgb(50, 50, 100);
+  cursor: pointer;
 }
 .toolbox .navbar__burger--services, .toolbox .navbar__burger--homepage {
   color: rgb(255, 255, 255);
@@ -279,6 +287,9 @@ a {
   box-shadow: 0px 0px 30px rgb(179, 179, 186);
   z-index: 9999;
 }
+.toolbox .navbar__container--active {
+  transform: translateY(0);
+}
 .toolbox .navbar__cross {
   display: flex;
   align-self: flex-end;
@@ -290,6 +301,7 @@ a {
   font-weight: 100;
   color: rgb(236, 111, 93);
   transition: background-color 0.5s;
+  cursor: pointer;
 }
 .toolbox .navbar__cross:active {
   background-color: rgb(230, 230, 240);
@@ -314,6 +326,10 @@ a {
   font-weight: 700;
   color: rgb(36, 163, 255);
   transition: background-color 0.5s;
+  cursor: pointer;
+}
+.toolbox .navbar__link:focus-visible, .toolbox .navbar__link:hover, .toolbox .navbar__button:focus-visible, .toolbox .navbar__button:hover {
+  background-color: rgb(237, 237, 247);
 }
 .toolbox .navbar__link:active, .toolbox .navbar__button:active {
   background-color: rgb(230, 230, 240);
@@ -575,6 +591,7 @@ a {
   font-weight: 700;
   line-height: 20px;
   color: rgb(70, 70, 110);
+  transition: color 0.5s;
 }
 .footer .social__number:focus-visible, .footer .social__number:hover, .footer .social__number:active {
   color: rgb(240, 20, 90);
@@ -584,6 +601,7 @@ a {
   font-weight: 700;
   line-height: 20px;
   color: rgb(36, 163, 255);
+  transition: color 0.5s;
 }
 .footer .social__email:focus-visible, .footer .social__email:hover {
   color: rgb(0, 133, 255);

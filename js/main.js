@@ -7,11 +7,11 @@ const burger = document.getElementById('navbarBurger');
 const navbarCross = document.getElementById('navbarCross');
 
 burger.addEventListener('click', function(){
-    burger.classList.add('navbar__burger--active');
-    navbarList.style.transform = "translateY(0)";
+    burger.classList.toggle('navbar__burger--active');
+    navbarList.classList.toggle('navbar__container--active');
 });
 
 navbarCross.addEventListener('click', function(){
     burger.classList.remove('navbar__burger--active');
-    navbarList.style.transform = "translateY(100vh)";
+    navbarList.classList.remove('navbar__container--active');
 });
